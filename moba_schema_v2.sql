@@ -4,8 +4,8 @@ CREATE TABLE champion (
   champ_role     varchar2(10) not null,
   champ_level    number(2),
   total_exp      number(5),
-  health_points  number(4),
-  mana_points    number(4),
+  max_health_points  number(4),
+  max_mana_points    number(4),
   respawn_time   number(3),
   --skins          varchar2(10),
   primary key(champ_name)
@@ -22,7 +22,6 @@ CREATE TABLE user_account (
   date_created      date,
   dob               varchar2(10) not null,
   acct_level        number(3),
-  champ_name        varchar2(10),
   primary key(acct_name),
   foreign key(champ_name) references champion(champ_name)
 );
@@ -76,7 +75,6 @@ CREATE TABLE champ_ability (
 DROP TABLE item CASCADE CONSTRAINTS;
 CREATE TABLE item (
   item_name       varchar2(10) not null,
-  champ_name      varchar2(10) not null,
   item_type       varchar2(10),
   tier            number(1),
   primary key(item_name),
@@ -146,16 +144,12 @@ DROP TABLE boss_creep CASCADE CONSTRAINTS;
 CREATE TABLE boss_creep (
   boss_name          varchar2(10) not null,
   map_name           varchar2(10) not null,
-  boss_hp            number(4),
+  boss_hp            number(5),
   boss_damage        number(4),
   boss_exp           number(4),
   boss_respawn_time  number(3),
   primary key(boss_name),
   foreign key(map_name) references map(map_name)
 );
-
-
-
-
   
   
