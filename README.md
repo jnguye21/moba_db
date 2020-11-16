@@ -11,3 +11,5 @@ We are designing a database for a generalized MOBA (Multiplayer Online Battle Ar
 2.) Using your DBMS of choice, run the schema script
 
 3.) Run the data script
+
+4.) Have a nice day
