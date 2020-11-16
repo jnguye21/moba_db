@@ -7,5 +7,7 @@ We are designing a database for a generalized MOBA (Multiplayer Online Battle Ar
 ## Instructions:
 
 1.) Download moba_schema.sql and moba_data.sql
+
 2.) Using your DBMS of choice, run the schema script
+
 3.) Run the data script
